@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 16:46:21 by event             #+#    #+#             */
-/*   Updated: 2023/10/17 16:52:19 by event            ###   ########.fr       */
+/*   Created: 2023/10/17 19:46:57 by event             #+#    #+#             */
+/*   Updated: 2023/10/17 19:47:02 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include <stddef.h>
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-size_t	ft_strlen(const char *str);
-void	*ft_memset(void *str, unsigned char c, size_t n);
+void    ft_bzero(void *str, size_t n)
+{
+    size_t  i;
 
-void	*ft_memcpy(void *dest, const void *src, size_t n);
+    i = 0;
+    while (((char*)str)[i])
+    {
+        if (i < n)
+            ((char*)str)[i] = '\0';
+        i++;
+    }
+}
+
+#include <stdio.h>
+#include <strings.h>
+
+int main(void)
+{
+    char	string[] = "Hello World";
+    size_t	n = 5;
+
+    printf("Real: %s\n", bzero(string, n));
+    printf("Mine: %s", ft_bzero(string, n));
+    return (0);
+}
