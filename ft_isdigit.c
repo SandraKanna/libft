@@ -6,13 +6,13 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:36:28 by event             #+#    #+#             */
-/*   Updated: 2023/10/17 14:41:11 by event            ###   ########.fr       */
+/*   Updated: 2023/10/17 17:04:05 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(char c)
 {
-	if (c > '0' && c < '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
@@ -20,7 +20,7 @@ int	ft_isdigit(char c)
 #include <stdio.h>
 int	main(void)
 {
-	char	item = 't';
+	char	item = '0';
 	printf("%d", ft_isdigit(item));
 	return (0);
 }*/

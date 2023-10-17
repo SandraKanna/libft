@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 14:18:28 by event             #+#    #+#             */
-/*   Updated: 2023/10/17 17:02:56 by event            ###   ########.fr       */
+/*   Created: 2023/10/17 16:25:22 by event             #+#    #+#             */
+/*   Updated: 2023/10/17 16:59:07 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isascii(int d)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (d >= 0 && d <= 127)
 		return (1);
 	return (0);
 }
 /*
 #include <stdio.h>
+#include <ctype.h>
 
 int	main(void)
 {
-	char	alpha = 'Z';
-	printf("%d", ft_isalpha(alpha));
+	int	d = -5;
+
+	printf("Real: %d\n", isascii(d));
+	printf("Mine: %d\n", ft_isascii(d));
 	return (0);
 }*/
