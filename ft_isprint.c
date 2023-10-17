@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 16:13:42 by event             #+#    #+#             */
-/*   Updated: 2023/10/17 17:01:21 by event            ###   ########.fr       */
+/*   Created: 2023/10/17 17:16:15 by event             #+#    #+#             */
+/*   Updated: 2023/10/17 17:25:40 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+int	ft_isprint(int c)
 {
-	if ((c >= 48 && c <= 57) || (c >= 97 && c <= 122)
-			|| (c >= 65 && c <= 90))
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
 /*
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+
 int	main(void)
 {
-	int	alphanum = 57;
-
-	printf("Real: %d\n", isalnum(alphanum));
-	printf("Mine: %d", ft_isalnum(alphanum));
+	int c = 0;
+	printf("Real: %d\n", isprint(c));
+	printf("Mine: %d\n", ft_isprint(c));
 	return (0);
-}/*
+}*/

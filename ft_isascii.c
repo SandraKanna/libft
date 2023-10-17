@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int d)
+int	ft_isascii(int c)
 {
-	if (d >= 0 && d <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
@@ -22,7 +22,7 @@ int	ft_isascii(int d)
 
 int	main(void)
 {
-	int	d = -5;
+	int	d = 5;
 
 	printf("Real: %d\n", isascii(d));
 	printf("Mine: %d\n", ft_isascii(d));

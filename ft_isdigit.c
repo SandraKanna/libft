@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int d)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }
@@ -20,7 +20,7 @@ int	ft_isdigit(char c)
 #include <stdio.h>
 int	main(void)
 {
-	char	item = '0';
-	printf("%d", ft_isdigit(item));
+	int	digit = 48;
+	printf("%d", ft_isdigit(digit));
 	return (0);
 }*/

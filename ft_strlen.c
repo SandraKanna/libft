@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 16:13:42 by event             #+#    #+#             */
-/*   Updated: 2023/10/17 17:01:21 by event            ###   ########.fr       */
+/*   Created: 2023/10/17 18:16:59 by event             #+#    #+#             */
+/*   Updated: 2023/10/17 18:33:02 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
-	if ((c >= 48 && c <= 57) || (c >= 97 && c <= 122)
-			|| (c >= 65 && c <= 90))
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
+
 /*
+#include <string.h>
 #include <stdio.h>
-#include <ctype.h>
 int	main(void)
 {
-	int	alphanum = 57;
+	const char	string[] = "Hello ";
 
-	printf("Real: %d\n", isalnum(alphanum));
-	printf("Mine: %d", ft_isalnum(alphanum));
+	printf("Real: %zu\n", strlen(string));
+	printf("Mine: %zu", ft_strlen(string));
 	return (0);
-}/*
+}*/

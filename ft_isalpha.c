@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
 		return (1);
 	return (0);
 }
@@ -21,7 +21,7 @@ int	ft_isalpha(char c)
 
 int	main(void)
 {
-	char	alpha = 'Z';
+	int	alpha = 96;
 	printf("%d", ft_isalpha(alpha));
 	return (0);
 }*/
