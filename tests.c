@@ -1,4 +1,7 @@
 #include "libft.h"
+#include <strings.h>
+#include <string.h>
+#include <ctype.h>
 
 int	main(void)
 {
@@ -10,29 +13,33 @@ int	main(void)
 
 
 //isalpha
-	printf("isalpha: %d\n", ft_isalpha('a'));
+	printf("ft_isalpha: %d\n", ft_isalpha('a'));
 
 //isdigit
-	printf("isdigit: %d\n", ft_isdigit(arg));
+	printf("ft_isdigit: %d\n", ft_isdigit(arg));
 
 //isalnum
-	printf("isalnum: %d\n", ft_isalnum(arg));
+	printf("ft_isalnum: %d\n", ft_isalnum(arg));
 
 //isascii
-	printf("isascii: %d\n", ft_isascii(arg));
+	printf("ft_isascii: %d\n", ft_isascii(arg));
 
 //isprint
-	printf("isprint: %d\n", ft_isprint(arg));
+	printf("ft_isprint: %d\n", ft_isprint(arg));
 
 //strlen
-	printf("strlen: %zu\n", ft_strlen(str1));
+	printf("ft_strlen: %zu\n", ft_strlen(str1));
+	printf("strlen: %zu\n", strlen(str1));
 
 //memset
-	printf("memset: %s\n", (char*)ft_memset(str1, arg, n));
+	printf("ft_memset: %s\n", (char*)ft_memset(str1, arg, n));
 //bzero
 
 //memcpy
-	printf("memcpy: %s\n", (char*)ft_memcpy(dest, src, n));
+	printf("ft_memcpy: %s\n", (char*)ft_memcpy(dest, src, n));
+
+//memmove
+	
 
 	return (0);
 }

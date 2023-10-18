@@ -26,17 +26,23 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-/**
+/*
 #include <stdio.h>
 #include <string.h>
 
 int main(void)
 {
-    char	src[] = "-Hello World";
-    char	dest[100];
-    size_t	n = 5;
+    char	src1[] = "hey you";
+    char    src2[] = "hey you";
+    char	dest1[] = "123";
+    char    dest2[] = "123";
+    size_t	n = 4;
 
-    printf("Real: %s\n", (char*)memcpy(dest, src, n));
-    printf("Mine: %s", (char*)ft_memcpy(dest, src, n));
+    printf("dest1: %s, dest2: %s\n", dest1, dest2);
+    printf("Real: %s\n", (char*)memcpy(dest1, src1, n));
+    printf("new dest1: %s\n", dest1);
+    printf("Mine: %s\n", (char*)ft_memcpy(dest2, src2, n));
+    printf("new dest2: %s\n", dest2);
+
     return (0);
 }*/
