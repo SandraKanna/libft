@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	if ((c >= 48 && c <= 57) || (c >= 97 && c <= 122)
@@ -17,14 +19,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <ctype.h>
-int	main(void)
-{
-	int	alphanum = 57;
-
-	printf("Real: %d\n", isalnum(alphanum));
-	printf("Mine: %d", ft_isalnum(alphanum));
-	return (0);
-}/*

@@ -10,22 +10,22 @@
 #                                                                              #
 # **************************************************************************** #
 
-CFILES = $(wildcard ft_*.c)
+CFILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c
 OFILES = $(CFILES:.c=.o)
-HEADERS = libft.h
+
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-all: $(NAME) $(COMPILE)
+all: $(NAME)
 
-$(COMPILE)%.o: %.c
-	$(CC) $(CFLAG) -c $< -o $@ -I $(HEADERS)
+%.o: %.c
+	$(CC) $(CFLAG) -c $< -o $@
 
 $(NAME): $(OFILES)
-	ar -rcs $(NAME) $(OFILES)
+	ar -rcs $@ $^
 
 clean:
 	rm -f $(OFILES)
@@ -33,6 +33,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
 .PHONY: all clean fclean re

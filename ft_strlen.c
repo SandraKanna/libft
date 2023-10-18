@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -27,7 +27,7 @@ size_t	ft_strlen(const char *str)
 #include <stdio.h>
 int	main(void)
 {
-	const char	string[] = "Hello ";
+	char	string[] = "Hello youuuuu";
 
 	printf("Real: %zu\n", strlen(string));
 	printf("Mine: %zu", ft_strlen(string));
