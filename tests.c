@@ -82,9 +82,19 @@ int	main(void)
 	char	dest4[] = "123";
 	size_t	size = sizeof(dest4);
 
-//	printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size));
+	//printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size));
 	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest4, src4, size));
-	printf ("src len: %ld", ft_strlen(src4));
+	printf ("src len: %ld\n", ft_strlen(src4));
+	printf("\n");
 
+//strlcat
+
+//toupper
+	int	c = 98;	
+	
+	printf("toupper: %c\n", toupper(c));
+	printf("ft_toupper: %c\n", ft_toupper(c));
+	printf("\n");
+	
 	return (0);
 }
