@@ -100,5 +100,12 @@ int	main(void)
 	printf("ft_tolower: %d\n", ft_tolower('Z'));
 	printf("\n");
 
+//strchr
+	char	str5[] = "abcde";
+
+	printf("strchr: %s\n", (char*)strchr(str5, 'b'));
+	printf("ft_strchr: %s\n", (char*)ft_strchr(str5, 'b'));
+	printf("\n");
+
 	return (0);
 }

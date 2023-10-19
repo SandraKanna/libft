@@ -30,5 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 int	ft_toupper(int c);
 int	ft_tolower(int c);
+char	*ft_strchr(const char *str, int c);
 
 #endif
