@@ -34,12 +34,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int	main(void)
 {
-	char	str1[] = "abc1 .";
-	char	str2[] = "abd1 2";
-	size_t	n = 4;
+	char	string1[] = "";
+	char	string2[] = "abd1";
+//	size_t	n = 4;
 
-	printf("strncmp: %d\n", strncmp(str1, str2, n));	
-	printf("ft_strncmp: %d\n", ft_strncmp(str1, str2, n));
+	printf("strncmp: %d\n", strncmp(string1, string2, 4));	
+	printf("ft_strncmp: %d\n", ft_strncmp(string1, string2, 4));
 	return(0);
-}
-*/
+}*/

@@ -115,11 +115,11 @@ int	main(void)
 	printf("\n");
 
 //strncmp
-	char	str7[] = "abc1";
-	char	str8[] = "abd1";
+	char	string1[] = "";
+	char	string2[] = "abd1";
 
-	printf("strncmp: %d\n", strncmp(str7, str8, 4));	
-	printf("ft_strncmp: %d\n", ft_strncmp(str7, str8, 4));
+	printf("strncmp: %d\n", strncmp(string1, string2, 4));	
+	printf("ft_strncmp: %d\n", ft_strncmp(string1, string2, 4));
 
 	return (0);
 }
