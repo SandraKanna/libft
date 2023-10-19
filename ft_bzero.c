@@ -23,7 +23,7 @@ void	ft_bzero(void *str, size_t n)
         i++;
     }
 }
-
+/*
 #include <stdio.h>
 #include <strings.h>
 #include <unistd.h>
@@ -35,8 +35,7 @@ int main(void)
 
     bzero(str1, n);
     printf("Real: %s\n", str1);
-    printf("\n");
     ft_bzero(str2, n);
     printf("Mine: %s\n", str2);
     return (0);
-}
+}*/

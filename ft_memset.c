@@ -34,7 +34,7 @@ int main(void)
 {
     char	string[] = "Hello World";
     int	c = 48;
-    size_t	n = 5;
+    size_t	n = 20;
 
     printf("Real: %s\n", (char*)memset(string, c, n));
     printf("Mine: %s", (char*)ft_memset(string, c, n));

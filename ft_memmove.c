@@ -14,35 +14,39 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
     size_t	i;
-    char	*temp;
-
-    temp = NULL;
+    
     i = 0;
-
-    if (((char*)src)[i] != '\0')
+    if (src < dest)
     {
-        while (i < n)  
+        i = n;
+        while (i > 0)
         {
-            temp[i] = ((char*)src)[i];
-            ((char*)dest)[i] = temp[i];
+            i--;
+            ((char*)dest)[i] = ((char*)src)[i];
+        }
+    }
+    else
+    {
+        while (i < n)
+        {
+            ((char*)dest)[i] = ((char*)src)[i];
             i++;
         }
-        return(dest);
     }
-    return (0);
+    return (dest);
 }
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 
 int main(void)
 {
-    char	src[] = "heydfhsfhgrjhdghjfgjhghjgh";
-    char	dest[] = "1234567891011";
-    size_t	n = 2;
+    char	src[] = "hel";
+    char	dest[] = "you hoo ";
+    size_t	n = 5;
 
     printf("Real: %s\n", (char*)memmove(dest, src, n));
     printf("Mine: %s\n", (char*)ft_memmove(dest, src, n));
     return (0);
-}
+}*/
