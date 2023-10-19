@@ -107,5 +107,12 @@ int	main(void)
 	printf("ft_strchr: %s\n", (char*)ft_strchr(str5, 'b'));
 	printf("\n");
 
+//strrchr
+	char	str6[] = "aBccdBe1";
+
+	printf("strrchr: %s\n", (char*)strrchr(str6, 66));
+	printf("ft_strrchr: %s\n", (char*)ft_strrchr(str6, 66));
+	printf("\n");	
+
 	return (0);
 }
