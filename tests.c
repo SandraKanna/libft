@@ -112,7 +112,14 @@ int	main(void)
 
 	printf("strrchr: %s\n", (char*)strrchr(str6, 66));
 	printf("ft_strrchr: %s\n", (char*)ft_strrchr(str6, 66));
-	printf("\n");	
+	printf("\n");
+
+//strncmp
+	char	str7[] = "abc1";
+	char	str8[] = "abd1";
+
+	printf("strncmp: %d\n", strncmp(str7, str8, 4));	
+	printf("ft_strncmp: %d\n", ft_strncmp(str7, str8, 4));
 
 	return (0);
 }
