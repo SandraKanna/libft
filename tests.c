@@ -1,5 +1,6 @@
 #include "libft.h"
 #include <strings.h>
+#include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <bsd/string.h>
@@ -90,11 +91,14 @@ int	main(void)
 //strlcat
 
 //toupper
-	int	c = 98;	
-	
-	printf("toupper: %c\n", toupper(c));
-	printf("ft_toupper: %c\n", ft_toupper(c));
+	printf("toupper: %d\n", toupper('c'));
+	printf("ft_toupper: %d\n", ft_toupper('c'));
 	printf("\n");
-	
+
+//tolower
+	printf("tolower: %d\n", tolower('Z'));
+	printf("ft_tolower: %d\n", ft_tolower('Z'));
+	printf("\n");
+
 	return (0);
 }
