@@ -2,6 +2,7 @@
 #include <strings.h>
 #include <string.h>
 #include <ctype.h>
+#include <bsd/string.h>
 
 int	main(void)
 {//isalpha
@@ -75,6 +76,15 @@ int	main(void)
 	printf("memmove: %s\n", (char*)memmove(dest3, src3, size5));
     printf("ft_memmove: %s\n", (char*)ft_memmove(dest3, src3, size5));	
 	printf("\n");
+
+//strlcpy
+	char	src4[] = "1";
+	char	dest4[] = "123";
+	size_t	size = sizeof(dest4);
+
+//	printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size));
+	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest4, src4, size));
+	printf ("src len: %ld", ft_strlen(src4));
 
 	return (0);
 }
