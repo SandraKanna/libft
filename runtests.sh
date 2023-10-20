@@ -1,4 +1,4 @@
 gcc -Wall -Wextra -Werror -c tests.c -o tests.o
-gcc -o tests tests.o -L. -lft -g -fsanitize=address
+gcc -o tests tests.o -L. -lft -g -fsanitize=address -lbsd
 ./tests
 rm tests tests.o

@@ -137,5 +137,14 @@ int	main(void)
 	printf("ft_memcmp: %d\n", ft_memcmp(string4, string5, 2));
 	printf("\n");
 
+//strnstr
+	char *bigstr = "Foo Bar All";
+	char	*smallstr = "";
+	size_t	len = 7;
+	
+	printf("strnstr: %s\n", strnstr(bigstr, smallstr, len));
+	printf("ft_strnstr: %s\n", ft_strnstr(bigstr, smallstr, len));
+	printf("\n");
+	
 	return (0);
 }
