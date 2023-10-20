@@ -25,7 +25,6 @@ void	*ft_memset(void *str, int c, size_t n)
     }
     return (str);
 }
-
 /*
 #include <stdio.h>
 #include <string.h>

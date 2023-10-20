@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 18:55:14 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/19 19:17:07 by skanna           ###   ########.fr       */
+/*   Created: 2023/10/20 12:35:04 by skanna            #+#    #+#             */
+/*   Updated: 2023/10/20 12:42:28 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (i < n - 1 && (s1[i]))
+	while (i < n - 1)
 	{
-		if (s1[i] == s2[i])
+		if (((unsigned char*)s1)[i] == ((unsigned char*)s2)[i])
 			i++;
-		else 
-			return (s1[i] - s2[i]);
+		else
+			return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
 	}
-	return (s1[i] - s2[i]);
+	return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
 }
 /*
 #include <stdio.h>
@@ -34,10 +34,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int	main(void)
 {
-	char	string1[] = "abc1d";
-	char	string2[] = "abc2d";
+	char	string1[] = "a5";
+	char	string2[] = "abcd55";
 
-	printf("strncmp: %d\n", strncmp(string1, string2, 3));	
-	printf("ft_strncmp: %d\n", ft_strncmp(string1, string2, 3));
+	printf("memcmp: %d\n", memcmp(string1, string2, 2));	
+	printf("ft_memcmp: %d\n", ft_memcmp(string1, string2, 2));
 	return(0);
 }*/

@@ -120,12 +120,22 @@ int	main(void)
 
 	printf("strncmp: %d\n", strncmp(string1, string2, 4));	
 	printf("ft_strncmp: %d\n", ft_strncmp(string1, string2, 4));
+	printf("\n");
 
 //memchr
 	char	string3[] = "kanna";
 
 	printf("memchr: %s\n", (char*)memchr(string3, 'n', 4));
 	printf("ft_memchr: %s\n", (char*)ft_memchr(string3,'n', 4));
+	printf("\n");
+
+//memcmp
+	char	string4[] = "a5";
+	char	string5[] = "abcd55";
+
+	printf("memcmp: %d\n", memcmp(string4, string5, 2));	
+	printf("ft_memcmp: %d\n", ft_memcmp(string4, string5, 2));
+	printf("\n");
 
 	return (0);
 }
