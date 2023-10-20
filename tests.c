@@ -121,5 +121,11 @@ int	main(void)
 	printf("strncmp: %d\n", strncmp(string1, string2, 4));	
 	printf("ft_strncmp: %d\n", ft_strncmp(string1, string2, 4));
 
+//memchr
+	char	string3[] = "kanna";
+
+	printf("memchr: %s\n", (char*)memchr(string3, 'n', 4));
+	printf("ft_memchr: %s\n", (char*)ft_memchr(string3,'n', 4));
+
 	return (0);
 }
