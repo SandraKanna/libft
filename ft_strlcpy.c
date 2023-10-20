@@ -30,7 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	len = ft_strlen(src);
 	if (size < len)
 		return (len + (len - size));
-	
 	else
 	{
 		while (i < size - 1)

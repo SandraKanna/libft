@@ -80,11 +80,11 @@ int	main(void)
 	printf("\n");
 
 //strlcpy
-	char	src4[] = "1";
+	char	src4[] = "A";
 	char	dest4[] = "123";
 	size_t	size = sizeof(dest4);
 
-	//printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size));
+	printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size));
 	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest4, src4, size));
 	printf ("src len: %ld\n", ft_strlen(src4));
 	printf("\n");
@@ -153,6 +153,6 @@ int	main(void)
 	printf("atoi: %d\n", atoi(string6));
 	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
-	
+
 	return (0);
 }
