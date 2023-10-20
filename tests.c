@@ -1,9 +1,10 @@
 #include "libft.h"
 #include <strings.h>
-#include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 #include <bsd/string.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
 
 int	main(void)
 {//isalpha
@@ -144,6 +145,13 @@ int	main(void)
 	
 	printf("strnstr: %s\n", strnstr(bigstr, smallstr, len));
 	printf("ft_strnstr: %s\n", ft_strnstr(bigstr, smallstr, len));
+	printf("\n");
+
+//atoi
+	char	*string6 = "-88";
+	
+	printf("atoi: %d\n", atoi(string6));
+	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
 	
 	return (0);
