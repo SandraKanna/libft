@@ -32,13 +32,13 @@ int	ft_atoi(const char *str)
 		num = num * -1;
 	return (num);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 #include <stdlib.h>
 
 int	main(void)
 {
-	char	*string = "-88";
+	char	*string = "++++88";
 	
 	printf("atoi: %d\n", atoi(string));
 	printf("ft_atoi: %d\n", ft_atoi(string));

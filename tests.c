@@ -164,5 +164,16 @@ int	main(void)
 	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
 
+//strdup
+	char	*string7 = "123- pp \0../\n asdsd";
+	char	*res1 = strdup(string7);
+	char	*res2 = ft_strdup(string7);
+
+	printf("strdup: %s\n", res1);
+	free(res1);
+	printf("ft_strdup: %s\n", res2);
+	free(res2);
+	printf("\n");
+
 	return (0);
 }

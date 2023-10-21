@@ -54,10 +54,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 int	main(void)
 {
-	char	source[] = "\0";
-	char	dest1[50] = "\0";
-    char    dest2[] = "\0";
-    size_t  size = 0;
+	char	source[] = "cat\0";
+	char	dest1[50] = "hello \0";
+    char    dest2[] = "hello \0";
+    size_t  size = 50;
 
     printf ("strlcat: %ld\n", strlcat(dest1, source, size));
 	printf ("dest1: %s\n", dest1);
