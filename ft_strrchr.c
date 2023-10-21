@@ -6,7 +6,7 @@
 /*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:58:50 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/19 18:09:25 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/21 16:39:51 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		while (size > 0)
 		{
-			if (((char*)str)[size] == (char)c)
-				return (char*)(str + size);
+			if (((char *)str)[size] == (char)c)
+				return ((char *)(str + size));
 			size--;
 		}
 	}

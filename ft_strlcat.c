@@ -6,7 +6,7 @@
 /*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:16:38 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/20 16:18:06 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/21 16:47:26 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,29 +24,29 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t  len_src;
-    size_t  len_dst;
-    size_t  i;
-    size_t  j;
+	size_t	len_src;
+	size_t	len_dst;
+	size_t	i;
+	size_t	j;
 
-    len_src = ft_strlen(src);
-    len_dst = ft_strlen(dst);
-    i = 0;
-    j = 0;
-    if (size <= len_dst)
-        return (size + len_src);
-    while ((dst[i] != '\0') && i <= size - 1)
-    {
-        i++;
-        size--;
-    }
-    while ((src[j] != '\0') && j <= size - 1)
-    {
-        dst[i++] = src[j++];
-        size--;
-    }
-    dst[i] = '\0';
-    return (len_dst + len_src);
+	len_src = ft_strlen(src);
+	len_dst = ft_strlen(dst);
+	i = 0;
+	j = 0;
+	if (size <= len_dst)
+		return (size + len_src);
+	while ((dst[i] != '\0') && i <= size - 1)
+	{
+		i++;
+		size--;
+	}
+	while ((src[j] != '\0') && j <= size - 1)
+	{
+		dst[i++] = src[j++];
+		size--;
+	}
+	dst[i] = '\0';
+	return (len_dst + len_src);
 }
 /*
 #include <stdio.h>

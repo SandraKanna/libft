@@ -6,7 +6,7 @@
 /*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:13:28 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/19 17:25:18 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/21 16:49:07 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *str, int c)
 	while (*str != '\0')
 	{
 		if (*str == (char)c)
-			return ((char*)str);
+			return ((char *)str);
 		str++;
 	}
 	return (NULL);

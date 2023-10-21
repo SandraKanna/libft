@@ -6,7 +6,7 @@
 /*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 18:55:14 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/19 19:17:07 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/21 16:43:00 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (n == 0)
 		return (0);
@@ -23,7 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (s1[i] == s2[i])
 			i++;
-		else 
+		else
 			return (s1[i] - s2[i]);
 	}
 	return (s1[i] - s2[i]);

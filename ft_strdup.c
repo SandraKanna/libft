@@ -6,7 +6,7 @@
 /*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 14:02:12 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/21 14:13:41 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/21 16:48:27 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char	*ft_strdup(const char *s)
 	size_t	len_s;
 	size_t	i;
 
-
 	i = 0;
 	len_s = ft_strlen(s);
 	dup = malloc((len_s + 1) * sizeof(const char));
@@ -36,7 +35,7 @@ char	*ft_strdup(const char *s)
 		return (NULL);
 	while (s[i])
 	{
-		dup[i] = ((char*)s)[i];
+		dup[i] = ((char *)s)[i];
 		i++;
 	}
 	dup[i] = '\0';

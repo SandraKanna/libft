@@ -6,7 +6,7 @@
 /*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 13:14:24 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/20 13:28:40 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/21 16:41:01 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	j = 0;
 	if (!little)
-		return ((char*)big);
+		return ((char *)big);
 	while ((j < len) && (little[i]) && (big[j]))
 	{
 		if (little[i] == big[j])
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j++;
 	}
 	if (little[i] == '\0')
-		return ((char*)big + (j - i));
+		return ((char *)big + (j - i));
 	else
 		return (NULL);
 }
@@ -52,4 +52,3 @@ int	main(void)
 	return (0);
 }
 */
-

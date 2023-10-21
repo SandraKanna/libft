@@ -20,7 +20,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	num = 0;
 	while (str[i])
-	{ 
+	{
 		if (str[i] == 43 || str[i] == 45)
 			i++;
 		if (str[i] >= 48 && str[i] <= 57)

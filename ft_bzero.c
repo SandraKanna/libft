@@ -13,15 +13,15 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-    size_t	i;
+	size_t	i;
 
-    i = 0;
-    while (((char*)str)[i])
-    {
-        if (i < n)
-            ((char*)str)[i] = '\0';
-        i++;
-    }
+	i = 0;
+	while (((char *)str)[i])
+	{
+		if (i < n)
+			((char *)str)[i] = '\0';
+		i++;
+	}
 }
 /*
 #include <stdio.h>
@@ -29,13 +29,13 @@ void	ft_bzero(void *str, size_t n)
 #include <unistd.h>
 int main(void)
 {
-    char	str1[] = "Hello World";
-    char	str2[] = "Hello World";
-    size_t	n = 1;
+	char	str1[] = "Hello World";
+	char	str2[] = "Hello World";
+	size_t	n = 1;
 
-    bzero(str1, n);
-    printf("Real: %s\n", str1);
-    ft_bzero(str2, n);
-    printf("Mine: %s\n", str2);
-    return (0);
+	bzero(str1, n);
+	printf("Real: %s\n", str1);
+	ft_bzero(str2, n);
+	printf("Mine: %s\n", str2);
+	return (0);
 }*/

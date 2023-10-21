@@ -55,15 +55,15 @@ int	main(void)
 
 	bzero(str3, size2);
 	printf("bzero: %s\n", str3);
-    ft_bzero(str4, size2);
-    printf("ft_bzero: %s\n", str4);	
+	ft_bzero(str4, size2);
+	printf("ft_bzero: %s\n", str4);	
 	printf("\n");
 
 //memcpy
-    char	src1[] = "hey you";
-    char    src2[] = "hey you";
-    char	dest1[] = "123";
-    char    dest2[] = "123";
+	char	src1[] = "hey you";
+	char    src2[] = "hey you";
+	char	dest1[] = "123";
+	char    dest2[] = "123";
 	size_t	size4 = 3;	
 		
 	printf("memcpy: %s\n", (char*)memcpy(dest1, src1, size4));
@@ -71,12 +71,12 @@ int	main(void)
 	printf("\n");
 
 //memmove
-    char	src3[] = "heydfhsfhgrjhdghjfgjhghjgh";
-    char	dest3[100];
-    size_t	size5 = 4;
+	char	src3[] = "heydfhsfhgrjhdghjfgjhghjgh";
+	char	dest3[100];
+	size_t	size5 = 4;
 	
 	printf("memmove: %s\n", (char*)memmove(dest3, src3, size5));
-    printf("ft_memmove: %s\n", (char*)ft_memmove(dest3, src3, size5));	
+	printf("ft_memmove: %s\n", (char*)ft_memmove(dest3, src3, size5));	
 	printf("\n");
 
 //strlcpy
@@ -92,10 +92,10 @@ int	main(void)
 //strlcat
 	char	source[] = "\0";
 	char	destination1[50] = "\0";
-    char    destination2[] = "\0";
-    size_t  size7 = 0;
+	char    destination2[] = "\0";
+	size_t  size7 = 0;
 
-    printf ("strlcat: %ld\n", strlcat(destination1, source, size7));
+	printf ("strlcat: %ld\n", strlcat(destination1, source, size7));
 	printf ("dest1: %s\n", destination1);
 	printf ("ft_strlcat: %ld\n", ft_strlcat(destination2, source, size7));
 	printf ("dest2: %s\n", destination2);
