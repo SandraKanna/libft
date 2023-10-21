@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+/*size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ size_t	ft_strlen(const char *str)
 	while (str[i])
 		i++;
 	return (i);
-}
+}*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -33,27 +33,35 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
     len_dst = ft_strlen(dst);
     i = 0;
     j = 0;
-
     if (size <= len_dst)
         return (size + len_src);
-    while ((i < size - 1) && src[j])
-        dst[i++] = ((char*)src)[j++];
+    while ((dst[i] != '\0') && i <= size - 1)
+    {
+        i++;
+        size--;
+    }
+    while ((src[j] != '\0') && j <= size - 1)
+    {
+        dst[i++] = src[j++];
+        size--;
+    }
     dst[i] = '\0';
-   return(i + j);
+    return (len_dst + len_src);
 }
-
+/*
 #include <stdio.h>
 #include <bsd/string.h>
 
 int	main(void)
 {
-	char	source[] = " 123\0";
-	char	dest1[50] = "Oye Hola\0";
-    char    dest2[50] = "Oye Hola\0";
+	char	source[] = "\0";
+	char	dest1[50] = "\0";
+    char    dest2[] = "\0";
+    size_t  size = 0;
 
-    printf ("strlcat: %ld\n", strlcat(dest1, source, 15));
+    printf ("strlcat: %ld\n", strlcat(dest1, source, size));
 	printf ("dest1: %s\n", dest1);
-	printf ("ft_strlcat: %ld\n", ft_strlcat(dest2, source, 15));
+	printf ("ft_strlcat: %ld\n", ft_strlcat(dest2, source, size));
 	printf ("dest2: %s\n", dest2);
 	return (0);
-}
+}*/

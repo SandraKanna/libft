@@ -82,14 +82,24 @@ int	main(void)
 //strlcpy
 	char	src4[] = "A";
 	char	dest4[] = "123";
-	size_t	size = sizeof(dest4);
+	size_t	size6 = sizeof(dest4);
 
-	printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size));
-	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest4, src4, size));
+	printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size6));
+	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest4, src4, size6));
 	printf ("src len: %ld\n", ft_strlen(src4));
 	printf("\n");
 
 //strlcat
+	char	source[] = "\0";
+	char	destination1[50] = "\0";
+    char    destination2[] = "\0";
+    size_t  size7 = 0;
+
+    printf ("strlcat: %ld\n", strlcat(destination1, source, size7));
+	printf ("dest1: %s\n", destination1);
+	printf ("ft_strlcat: %ld\n", ft_strlcat(destination2, source, size7));
+	printf ("dest2: %s\n", destination2);
+	printf("\n");
 
 //toupper
 	printf("toupper: %d\n", toupper('c'));
