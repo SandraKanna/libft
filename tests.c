@@ -1,4 +1,4 @@
-#include "libft.h"
+/*#include "libft.h"
 #include <strings.h>
 #include <string.h>
 #include <bsd/string.h>
@@ -165,8 +165,8 @@ int	main(void)
 	printf("\n");
 
 //calloc
-	char	*str_mycalloc;
-	char	*str_calloc;
+	char	*str_mycalloc = "123456789";
+	char	*str_calloc = "123456789";
 	size_t	n_items = 10;
 	size_t	type_size = sizeof(char);
 	
@@ -174,8 +174,10 @@ int	main(void)
 	str_calloc = calloc(n_items, type_size);
 	printf("Test1: %d\n", ft_memcmp(str_mycalloc, str_calloc, n_items));
 	printf("Test2: %d\n", memcmp(str_mycalloc, str_calloc, n_items));
+	free(str_mycalloc);
+	free(str_calloc);
 	printf("\n");
-	
+
 //strdup
 	char	*string7 = "123- pp \0../\n asdsd";
 	char	*res1 = strdup(string7);
@@ -188,4 +190,4 @@ int	main(void)
 	printf("\n");
 
 	return (0);
-}
+}*/
