@@ -1,4 +1,4 @@
-/*#include "libft.h"
+#include "libft.h"
 #include <strings.h>
 #include <string.h>
 #include <bsd/string.h>
@@ -7,7 +7,9 @@
 #include <stdlib.h>
 
 int	main(void)
-{//isalpha
+{
+	/*
+//isalpha
 	printf("isalpha: %d\n", isalpha(122));
 	printf("ft_isalpha: %d\n", ft_isalpha(122));
 	printf("\n");
@@ -188,6 +190,16 @@ int	main(void)
 	printf("ft_strdup: %s\n", res2);
 	free(res2);
 	printf("\n");
+*/
+//Part 2
+//substr
+	char	*string8 = "Mira";
+	int		start = 6;
+	size_t	len = strlen(string8);
+	char	*print_substr = ft_substr(string8, start, len);
+
+	printf("ft_substr: %s\n", print_substr);
+	free(print_substr);
 
 	return (0);
-}*/
+}

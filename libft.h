@@ -40,5 +40,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t n_items, size_t array_type_size);
 char	*ft_strdup(const char *s);
+//part 2
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
