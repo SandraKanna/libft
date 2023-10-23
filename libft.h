@@ -42,5 +42,6 @@ void	*ft_calloc(size_t n_items, size_t array_type_size);
 char	*ft_strdup(const char *s);
 //part 2
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif

@@ -165,7 +165,7 @@ int	main(void)
 	printf("atoi: %d\n", atoi(string6));
 	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
-
+*/
 //calloc
 	char	*str_mycalloc = "123456789";
 	char	*str_calloc = "123456789";
@@ -190,7 +190,7 @@ int	main(void)
 	printf("ft_strdup: %s\n", res2);
 	free(res2);
 	printf("\n");
-*/
+
 //Part 2
 //substr
 	char	*string8 = "Mira";
@@ -200,6 +200,14 @@ int	main(void)
 
 	printf("ft_substr: %s\n", print_substr);
 	free(print_substr);
+
+//strjoin
+	char	*s1 = "Mira lo";
+	char	*s2 = "que me encontre";
+	char	*s3 = ft_strjoin(s1, s2);
+
+	printf("strjoin: %s\n", s3);
+	free(s3);
 
 	return (0);
 }
