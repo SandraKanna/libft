@@ -164,6 +164,18 @@ int	main(void)
 	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
 
+//calloc
+	char	*str_mycalloc;
+	char	*str_calloc;
+	size_t	n_items = 10;
+	size_t	type_size = sizeof(char);
+	
+	str_mycalloc = ft_calloc(n_items, type_size);
+	str_calloc = calloc(n_items, type_size);
+	printf("Test1: %d\n", ft_memcmp(str_mycalloc, str_calloc, n_items));
+	printf("Test2: %d\n", memcmp(str_mycalloc, str_calloc, n_items));
+	printf("\n");
+	
 //strdup
 	char	*string7 = "123- pp \0../\n asdsd";
 	char	*res1 = strdup(string7);
