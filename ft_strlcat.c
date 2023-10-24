@@ -12,15 +12,32 @@
 
 #include "libft.h"
 
-/*size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	int	h;
+
+	h = 0;
+	if (str == NULL)
+		return (0);
+	while (str[h])
+		h++;
+	return (h);
+}
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t	i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}*/
+	while (i < n)
+	{
+		if (((char *)s)[i] != (char)c)
+			i++;
+		else
+			return ((char *)(s + i));
+	}
+	return (NULL);
+}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -48,20 +65,23 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (len_dst + len_src);
 }
-/*
+
 #include <stdio.h>
 #include <bsd/string.h>
 
 int	main(void)
 {
 	char	source[] = "cat\0";
-	char	dest1[50] = "hello \0";
-    char    dest2[] = "hello \0";
-    size_t  size = 50;
+	char	dest1[10];
+    char    dest2[10];
+    size_t  size = sizeof(dest2);
 
-    printf ("strlcat: %ld\n", strlcat(dest1, source, size));
-	printf ("dest1: %s\n", dest1);
+    printf ("dest1 before: %s\n", dest1);
+	printf ("strlcat: %ld\n", strlcat(dest1, source, size));
+	printf ("dest1 after real function: %s\n", dest1);
+	printf("\n");
+	printf ("dest2 before: %s\n", dest2);
 	printf ("ft_strlcat: %ld\n", ft_strlcat(dest2, source, size));
-	printf ("dest2: %s\n", dest2);
+	printf ("dest2 after my function: %s\n", dest2);
 	return (0);
-}*/
+}

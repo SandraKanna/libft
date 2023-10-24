@@ -8,7 +8,7 @@
 
 int	main(void)
 {
-
+/*
 //isalpha
 	printf("isalpha: %d\n", isalpha(122));
 	printf("ft_isalpha: %d\n", ft_isalpha(122));
@@ -85,21 +85,27 @@ int	main(void)
 //strlcpy
 	char	src4[] = "A";
 	char	dest4[] = "123";
+	char	dest5[] = "123";
 	size_t	size6 = sizeof(dest4);
 
+	printf ("dest1 before: %s\n", dest4);
 	printf ("strlcpy: %ld\n", strlcpy(dest4, src4, size6));
-	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest4, src4, size6));
-	printf ("src len: %ld\n", ft_strlen(src4));
+	printf ("dest1 after: %s\n", dest4);
+	printf ("dest2 before: %s\n", dest5);
+	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest5, src4, size6));
+	printf ("dest2 after: %s\n", dest5);
 	printf("\n");
-
+*/
 //strlcat
 	char	source[] = "\0";
 	char	destination1[50] = "\0";
 	char    destination2[] = "\0";
 	size_t  size7 = 0;
 
+	printf ("dest1 before: %s\n", destination1);
 	printf ("strlcat: %ld\n", strlcat(destination1, source, size7));
-	printf ("dest1: %s\n", destination1);
+	printf ("dest1 after: %s\n", destination1);
+	printf ("dest2 before: %s\n", destination2);
 	printf ("ft_strlcat: %ld\n", ft_strlcat(destination2, source, size7));
 	printf ("dest2: %s\n", destination2);
 	printf("\n");

@@ -21,15 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	string[] = "Hello youuuuu";
-
-	printf("Real: %zu\n", strlen(string));
-	printf("Mine: %zu", ft_strlen(string));
-	return (0);
-}*/
