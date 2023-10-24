@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-/*size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}*/
-
 char	*ft_strrchr(const char *str, int c)
 {
 	int	size;
@@ -40,16 +30,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-	char	string[] = "abcdbe";
-	int	c = 'z';
-
-	printf("strrchr: %s\n", (char*)strrchr(string, c));
-	printf("ft_strrchr: %s\n", (char*)ft_strrchr(string, c));
-	return (0);
-}*/

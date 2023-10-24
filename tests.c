@@ -8,7 +8,7 @@
 
 int	main(void)
 {
-	/*
+
 //isalpha
 	printf("isalpha: %d\n", isalpha(122));
 	printf("ft_isalpha: %d\n", ft_isalpha(122));
@@ -42,18 +42,19 @@ int	main(void)
 	printf("\n");
 
 //memset
-	char	str2[] = "Hello World";
-	int	a = 2;
+	char	str_mem1[] = "Hell\0o World";
+	char	str_mem2[] = "Hell\0o World";
+	int	a = 6;
 	size_t	size1 = 1;
 
-	printf("memset: %s\n", (char*)memset(str2, a, size1));
-	printf("ft_memset: %s\n", (char*)ft_memset(str2, a, size1));
+	printf("memset: %s\n", (char*)memset(str_mem1, a, size1));
+	printf("ft_memset: %s\n", (char*)ft_memset(str_mem2, a, size1));
 	printf("\n");
 
 //bzero
-	char	str3[] = "Hello World";
-	char	str4[] = "Hello World";
-	size_t	size2 = 1;	
+	char	str3[10];
+	char	str4[10];
+	size_t	size2 = 10;	
 
 	bzero(str3, size2);
 	printf("bzero: %s\n", str3);
@@ -62,19 +63,19 @@ int	main(void)
 	printf("\n");
 
 //memcpy
-	char	src1[] = "hey you";
-	char    src2[] = "hey you";
-	char	dest1[] = "123";
-	char    dest2[] = "123";
-	size_t	size4 = 3;	
+	char	src1[] = "\0";
+	char    src2[] = "\0";
+	char	dest1[] = "\0";
+	char    dest2[] = "\0";
+	size_t	size4 = 2;	
 		
-	printf("memcpy: %s\n", (char*)memcpy(dest1, src1, size4));
-	printf("ft_memcpy: %s\n", (char*)ft_memcpy(dest2, src2, size4));
+	printf("real_memcpy: %s\n", (char*)memcpy(dest1, src1, size4));
+	printf("myft_memcpy: %s\n", (char*)ft_memcpy(dest2, src2, size4));
 	printf("\n");
 
 //memmove
-	char	src3[] = "heydfhsfhgrjhdghjfgjhghjgh";
-	char	dest3[100];
+	char	src3[] = "\0";
+	char	dest3[100] = "a";
 	size_t	size5 = 4;
 	
 	printf("memmove: %s\n", (char*)memmove(dest3, src3, size5));
@@ -165,7 +166,7 @@ int	main(void)
 	printf("atoi: %d\n", atoi(string6));
 	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
-*/
+
 //calloc
 	char	*str_mycalloc = "123456789";
 	char	*str_calloc = "123456789";
@@ -174,10 +175,11 @@ int	main(void)
 	
 	str_mycalloc = ft_calloc(n_items, type_size);
 	str_calloc = calloc(n_items, type_size);
-	printf("Test1: %d\n", ft_memcmp(str_mycalloc, str_calloc, n_items));
-	printf("Test2: %d\n", memcmp(str_mycalloc, str_calloc, n_items));
-	free(str_mycalloc);
+	
+	printf("Calloc test1: %d\n", memcmp(str_mycalloc, str_calloc, n_items));
+	printf("Calloc test2: %d\n", ft_memcmp(str_mycalloc, str_calloc, n_items));
 	free(str_calloc);
+	free(str_mycalloc);
 	printf("\n");
 
 //strdup
@@ -191,23 +193,36 @@ int	main(void)
 	free(res2);
 	printf("\n");
 
+
 //Part 2
 //substr
 	char	*string8 = "Mira";
 	int		start = 6;
-	size_t	len = strlen(string8);
-	char	*print_substr = ft_substr(string8, start, len);
+	size_t	len2 = strlen(string8);
+	char	*print_substr = ft_substr(string8, start, len2);
 
 	printf("ft_substr: %s\n", print_substr);
 	free(print_substr);
+	printf("\n");
 
 //strjoin
-	char	*s1 = "Mira lo";
+	char	*s1 = "Mira lo ";
 	char	*s2 = "que me encontre";
 	char	*s3 = ft_strjoin(s1, s2);
 
-	printf("strjoin: %s\n", s3);
+	printf("ft_strjoin: %s\n", s3);
 	free(s3);
+	printf("\n");
+
+//strtrim
+	char	*string9 = "&&Hey Jude &&";
+	char	*set = "&&";
+
+	char	*strtrim = ft_strtrim(string9, set);
+
+	printf("ft_strtrim: %s\n", strtrim);
+	free(strtrim);
+	printf("\n");
 
 	return (0);
 }
