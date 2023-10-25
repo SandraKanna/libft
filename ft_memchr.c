@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 11:35:23 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/20 11:47:34 by skanna           ###   ########.fr       */
+/*   Created: 2023/10/25 17:53:56 by skanna            #+#    #+#             */
+/*   Updated: 2023/10/25 17:56:06 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	string[] = "kanna";
-	size_t	n = 4;
-	int	c = 'n';
-
-	printf("memchr: %s\n", (char*)memchr(string, c, n));
-	printf("ft_memchr: %s\n", (char*)ft_memchr(string, c, n));
-}
-*/

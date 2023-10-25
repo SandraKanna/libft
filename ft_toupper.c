@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 16:01:08 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/19 16:14:14 by skanna           ###   ########.fr       */
+/*   Created: 2023/10/25 18:02:56 by skanna            #+#    #+#             */
+/*   Updated: 2023/10/25 18:03:05 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,3 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-/*
-#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{
-	int	c = 98;
-
-	printf("toupper: %c\n", toupper(c));
-	printf("ft_toupper: %c\n", ft_toupper(c));
-	return(0);
-}
-*/

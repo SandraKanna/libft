@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skanna <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 12:35:04 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/20 12:42:28 by skanna           ###   ########.fr       */
+/*   Created: 2023/10/25 17:56:41 by skanna            #+#    #+#             */
+/*   Updated: 2023/10/25 17:57:05 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	string1[] = "a5";
-	char	string2[] = "abcd55";
-
-	printf("memcmp: %d\n", memcmp(string1, string2, 2));	
-	printf("ft_memcmp: %d\n", ft_memcmp(string1, string2, 2));
-	return(0);
-}*/
