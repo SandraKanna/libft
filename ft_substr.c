@@ -12,12 +12,14 @@
 
 #include "libft.h"
 
-static char	ft_vide(void)
+static char	*ft_vide(void)
 {
 	char	*str;
 	
 	str = malloc(1);
-	str = '\0';
+	if (str == NULL)
+		return (NULL);
+	str[0] = '\0';
 	return (str);
 }
 
@@ -34,6 +36,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_vide());
 	if (len > ft_strlen(s))
 		len = ft_strlen(s);
+	if (len > ft_strlen(s) - start)
+	 	len = ft_strlen(s) - start;
 	substr = malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
