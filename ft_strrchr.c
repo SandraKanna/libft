@@ -6,7 +6,7 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:02:03 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/25 18:02:06 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/25 19:01:28 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,13 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int	size;
-
+	
 	size = ft_strlen(str);
-	if (!*str)
-		return (NULL);
-	else
+	while (size >= 0)
 	{
-		while (size > 0)
-		{
-			if (((char *)str)[size] == (char)c)
-				return ((char *)(str + size));
-			size--;
-		}
+		if (*(char *)(str + size) == (char)c)
+			return ((char *)(str + size));
+		size--;
 	}
 	return (NULL);
 }

@@ -129,17 +129,17 @@ int	main(void)
 	printf("ft_strchr: %p\n", (char*)ft_strchr(str5, 1024));
 
 	printf("\n");
-
+*/
 //strrchr
-	char	str6[] = "aBccdBe1";
+	char	str6[] = "";
 
-	printf("strrchr: %s\n", (char*)strrchr(str6, 66));
-	printf("ft_strrchr: %s\n", (char*)ft_strrchr(str6, 66));
+	printf("strrchr: %p\n", (char*)strrchr(str6, a));
+	printf("ft_strrchr: %p\n", (char*)ft_strrchr(str6, a));
 	printf("\n");
 
 //strncmp
 	char	string1[] = "";
-	char	string2[] = "abd1";
+	char	string2[] = "";
 
 	printf("strncmp: %d\n", strncmp(string1, string2, 4));	
 	printf("ft_strncmp: %d\n", ft_strncmp(string1, string2, 4));
@@ -175,7 +175,7 @@ int	main(void)
 	printf("atoi: %d\n", atoi(string6));
 	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
-*/
+
 //calloc
 	char	*str_mycalloc = "";
 	char	*str_calloc = "";
