@@ -138,8 +138,8 @@ int	main(void)
 	printf("\n");
 
 //strncmp
-	char	string1[] = "";
-	char	string2[] = "";
+	char	string1[] = "\200";
+	char	string2[] = "\0";
 
 	printf("strncmp: %d\n", strncmp(string1, string2, 4));	
 	printf("ft_strncmp: %d\n", ft_strncmp(string1, string2, 4));
