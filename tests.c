@@ -123,8 +123,11 @@ int	main(void)
 //strchr
 	char	str5[] = "abcde";
 
-	printf("strchr: %s\n", (char*)strchr(str5, 'b'));
-	printf("ft_strchr: %s\n", (char*)ft_strchr(str5, 'b'));
+	printf("strchr: %s\n", (char*)strchr(str5, 1024));
+	printf("strchr: %p\n", (char*)strchr(str5, 1024));
+	printf("ft_strchr: %s\n", (char*)ft_strchr(str5, 1024));
+	printf("ft_strchr: %p\n", (char*)ft_strchr(str5, 1024));
+
 	printf("\n");
 
 //strrchr

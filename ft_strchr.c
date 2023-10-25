@@ -14,24 +14,13 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str != '\0')
+	while (*str)
 	{
 		if (*str == (char)c)
 			return ((char *)str);
 		str++;
 	}
+	if (*str == (char)c)
+		return ((char *)str);
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-	char	string[] = "abcde";
-	int	c = 'd';
-
-	printf("strchr: %s\n", (char*)strchr(string, c));
-	printf("ft_strchr: %s\n", (char*)ft_strchr(string, c));
-	return (0);
-}*/
