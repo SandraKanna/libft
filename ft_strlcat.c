@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 size_t	ft_strlen(const char *str)
 {
 	int	h;
@@ -22,66 +22,77 @@ size_t	ft_strlen(const char *str)
 	while (str[h])
 		h++;
 	return (h);
-}
-
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (((char *)s)[i] != (char)c)
-			i++;
-		else
-			return ((char *)(s + i));
-	}
-	return (NULL);
-}
+}*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	len_src;
-	size_t	len_dst;
+	size_t	len_s;
+	size_t	len_d;
 	size_t	i;
-	size_t	j;
+	char	*destination;
+	char	*source;
 
-	len_src = ft_strlen(src);
-	len_dst = ft_strlen(dst);
+	destination = dst;
+	source = (char *)src;
 	i = 0;
-	j = 0;
-	if (size <= len_dst)
-		return (size + len_src);
-	while ((dst[i] != '\0') && i <= size - 1)
+	len_s = ft_strlen(source);
+	len_d = ft_strlen(destination);
+	if (size < len_d)
+		return(len_s + size);
+	while (len_d + i < size - 1 && source[i])
 	{
+		destination[len_d + i] = source[i];
 		i++;
-		size--;
 	}
-	while ((src[j] != '\0') && j <= size - 1)
-	{
-		dst[i++] = src[j++];
-		size--;
-	}
-	dst[i] = '\0';
-	return (len_dst + len_src);
+	destination[len_d + i] = '\0';
+	return (len_d + len_s);
 }
-
+/*
 #include <stdio.h>
 #include <bsd/string.h>
+#include <assert.h>
 
 int	main(void)
 {
-	char	source[] = "cat\0";
-	char	dest1[10];
-    char    dest2[10];
-    size_t  size = sizeof(dest2);
+	char	source1[] = "abcdefghi";
+	char	source2[] = "abcdefghi";
+	char	*dest1[20] = "1234";
+    char    *dest2[20] = "1234";
+    size_t  size = 8;
 
     printf ("dest1 before: %s\n", dest1);
-	printf ("strlcat: %ld\n", strlcat(dest1, source, size));
+	printf ("strlcat: %ld\n", strlcat(dest1, source1, size));
 	printf ("dest1 after real function: %s\n", dest1);
 	printf("\n");
+
 	printf ("dest2 before: %s\n", dest2);
-	printf ("ft_strlcat: %ld\n", ft_strlcat(dest2, source, size));
+	printf ("ft_strlcat: %ld\n", ft_strlcat(dest2, source2, size));
 	printf ("dest2 after my function: %s\n", dest2);
+
 	return (0);
 }
+
+{
+	size_t	len_src;
+	size_t	len_dst;
+	char	*ptr_0_dst;
+	char	*source;
+
+	len_src = ft_strlen(src);
+	source = (char *)src;
+	ptr_0_dst = ft_memchr(dst, '\0', size);
+	if (ptr_0_dst == NULL)
+	//si memchr ne trouve pas de '\0' => size > len_dst
+		return (len_src + size);
+	len_dst = (ptr_0_dst - dst);
+		//ptr_0_dst - dst = end - start = longuer 
+	while (( len_dst < size - 1) && (*source != '\0'))
+	{
+		*ptr_0_dst = *source;
+		ptr_0_dst++;
+		source++;
+	}
+	*ptr_0_dst = '\0';
+	return (len_dst + len_src);
+}
+*/
