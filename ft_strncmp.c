@@ -6,7 +6,7 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:01:35 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/25 19:44:15 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/25 19:45:10 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*string1;
 	unsigned char	*string2;
 

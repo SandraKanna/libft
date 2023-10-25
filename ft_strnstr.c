@@ -6,7 +6,7 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:01:50 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/25 18:01:53 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/25 20:52:04 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,23 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!little)
-		return ((char *)big);
-	while ((j < len) && (little[i]) && (big[j]))
+	// if (!little)
+	// 	return ((char *)big);
+	while ((j + i ) < len && (little[i]) && (big[j]))
 	{
-		if (little[i] == big[j])
+		if (little[i] == big[j + i])
 		{
 			i++;
-			j++;
+		//	j++;
 		}
 		else
+		{
+			i = 0;
 			j++;
+		}
 	}
 	if (little[i] == '\0')
-		return ((char *)big + (j - i));
+		return ((char *)big + j);
 	else
 		return (NULL);
 }
@@ -42,13 +45,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 //gcc -Wall -Wextra -Werror ft_strnstr.c -lbsd
 int	main(void)
 {
-	char *bigstr = "";
-	char	*smallstr = "Bac";
-	size_t	len = 7;
+	char *bigstr = "aaabcabcd";
+	void	*smallstr = "aabc";
+	size_t	len = 30;
 	
 	printf("strnstr: %s\n", strnstr(bigstr, smallstr, len));
 	printf("ft_strnstr: %s\n", ft_strnstr(bigstr, smallstr, len));
 
 	return (0);
-}
-*/
+}*/

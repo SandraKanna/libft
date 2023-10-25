@@ -6,11 +6,20 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:02:20 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/25 18:02:26 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/25 21:28:07 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	ft_vide(void)
+{
+	char	*str;
+	
+	str = malloc(1);
+	str = '\0';
+	return (str);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -18,16 +27,21 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*substr;
 
-	i = start;
-	j = 0;
-	substr = malloc(len * sizeof(char));
-	if (substr == NULL || start > len)
-	{
-		free(substr);
+	i = 0;
+	if (!s)
 		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_vide());
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
+	substr = malloc((len + 1) * sizeof(char));
+	if (substr == NULL)
+		return (NULL);
+	while (s[start + i] && i < len)
+	{
+		substr[i] = s[start + i];
+		i++;
 	}
-	while (s[i] && j < len)
-		substr[j++] = s[i++];
-	substr[j] = '\0';
+	substr[i] = '\0';
 	return (substr);
 }
