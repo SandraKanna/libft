@@ -95,11 +95,11 @@ int	main(void)
 	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest5, src4, size6));
 	printf ("dest2 after: %s\n", dest5);
 	printf("\n");
-*/
+
 //strlcat
 	char	source[] = "\0";
 	char	destination1[50] = "\0";
-	char    destination2[] = "\0";
+	char    destination2[50] = "\0";
 	size_t  size7 = 0;
 
 	printf ("dest1 before: %s\n", destination1);
@@ -172,12 +172,12 @@ int	main(void)
 	printf("atoi: %d\n", atoi(string6));
 	printf("ft_atoi: %d\n", ft_atoi(string6));
 	printf("\n");
-
+*/
 //calloc
-	char	*str_mycalloc = "123456789";
-	char	*str_calloc = "123456789";
-	size_t	n_items = 10;
-	size_t	type_size = sizeof(char);
+	char	*str_mycalloc = "";
+	char	*str_calloc = "";
+	size_t	n_items = 0;
+	size_t	type_size = 0;
 	
 	str_mycalloc = ft_calloc(n_items, type_size);
 	str_calloc = calloc(n_items, type_size);
