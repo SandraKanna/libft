@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-/*size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}*/
-
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
@@ -41,18 +31,3 @@ char	*ft_strdup(const char *s)
 	dup[i] = '\0';
 	return (dup);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	*string = "123- pp \0../\n asdsd";
-	char	*res1 = strdup(string);
-	char	*res2 = ft_strdup(string);
-
-	printf("strdup: %s\n", res1);
-	free(res1);
-	printf("ft_strdup: %s\n", res2);
-	free(res2);
-	return(0);
-}*/

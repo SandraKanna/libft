@@ -129,7 +129,7 @@ int	main(void)
 	printf("ft_strchr: %p\n", (char*)ft_strchr(str5, 1024));
 
 	printf("\n");
-*/
+
 //strrchr
 	char	str6[] = "";
 
@@ -170,7 +170,7 @@ int	main(void)
 	printf("\n");
 
 //atoi
-	char	*string6 = "-88";
+	char	*string6 = "--88asd2";
 	
 	printf("atoi: %d\n", atoi(string6));
 	printf("ft_atoi: %d\n", ft_atoi(string6));
@@ -202,7 +202,6 @@ int	main(void)
 	free(res2);
 	printf("\n");
 
-
 //Part 2
 //substr
 	char	*string8 = "Mira";
@@ -222,10 +221,10 @@ int	main(void)
 	printf("ft_strjoin: %s\n", s3);
 	free(s3);
 	printf("\n");
-
+*/
 //strtrim
-	char	*string9 = "&&Hey Jude &&";
-	char	*set = "&&";
+	char	*string9 = "";
+	char	*set = " ";
 
 	char	*strtrim = ft_strtrim(string9, set);
 

@@ -11,34 +11,40 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+static char	*ft_vide(void)
+{
+	char	*str;
+
+	str = malloc(1);
+	if (str == NULL)
+		return (NULL);
+	str[0] = '\0';
+	return (str);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*s1_trimmed;
-	int		i;
-	int		j;
-	int		len_s1;
-	int		len_set;
+	char		*s1_trimmed;
+	size_t		start;
+	size_t		end;
+	size_t		i;
 
 	i = 0;
-	j = 0;
-	len_s1 = ft_strlen(s1);
-	len_set = ft_strlen(set);
-	s1_trimmed = malloc((len_s1 + 1) * sizeof(char));
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	if (start == ft_strlen(s1))
+		return (ft_vide());
+	while (end > start && ft_strchr(set, s1[end]))
+		end--;
+	s1_trimmed = malloc((end - start + 2) * sizeof(char));
 	if (s1_trimmed == NULL)
 		return (NULL);
-	while (s1[i])
-	{
-		while (set[i] && s1[i] == set[i])
-			i++;
-		while (i < (len_s1 - len_set + 1))
-		{
-			s1_trimmed[j] = s1[i];
-			j++;
-			i++;
-		}
-	}
-	s1_trimmed[j] = '\0';
+	while (start <= end)
+		s1_trimmed[i++] = s1[start++];
+	s1_trimmed[i] = '\0';
 	return (s1_trimmed);
 }
-
