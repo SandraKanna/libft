@@ -232,5 +232,17 @@ int	main(void)
 	free(strtrim);
 	printf("\n");
 
+//putchar_fd
+	char	c = 'Z';
+	int	fd = 1;
+
+	ft_putchar_fd(c, fd);
+
+//putstr_fd
+	char	*c = 'ZaZZ';
+	int	fd = 1;
+
+	ft_putchar_fd(c, fd);
+
 	return (0);
 }
