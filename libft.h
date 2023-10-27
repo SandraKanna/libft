@@ -6,7 +6,7 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:03:17 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/26 21:12:33 by skanna           ###   ########.fr       */
+/*   Updated: 2023/10/27 18:30:11 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 
 char    *ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);

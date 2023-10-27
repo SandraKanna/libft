@@ -241,9 +241,20 @@ int	main(void)
 	printf("\n");	
 
 
-// //strmapi
+//strmapi
 
-// //striteri
+//striteri
+	char	*b = "abcd";
+	int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
+}
+	printf("before striteri: %s\n", b);
+	ft_striteri("abcd0", ft_toupper(*b));
+	printf("after striteri: %s\n", b);
 
 // //putchar_fd
 // 	char	c = 'Z';
