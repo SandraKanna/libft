@@ -11,34 +11,61 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char *ft_itoa(int n)
+static int	sign(long int n)
 {
-    long int    nbr;
-    int        sign;
-    char       *str;
-    int         i;
-    
-    nbr = n;
-    sign = 1;
-    str = malloc (ft_strlen(ft_itoa(n)) + 1 + sizeof(char));
-    if (!str)
-        return (NULL);
-    if (nbr < 0)
-    {
-        sign = sign * -1;
-        nbr = nbr * -1;
-    }
-    // if (nbr > 9)
-    // {
-    //     nbr
-    // }
+	if (n < 0)
+		return (-1);
+	else
+		return (1);
+}
+
+static int	length(long int n)
+{
+	int	i;
+	int	sign;
+
+	i = 1;
+	sign = 0;
+	if (n == -2147483648)
+		return (11);
+	if (n < 0)
+	{
+		n = n * -1;
+		sign = 1;
+	}
+	while (n >= 10)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (sign + i);
+}
+
+char	*ft_itoa(int n)
+{
+	long int	nbr;
+	int			len;
+	char		*str;
+	int			i;
+
+	nbr = n;
+	i = 0;
+	len = length(nbr);
+	str = malloc ((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	if (nbr < 0)
+		str[i++] = 45;
+	nbr = nbr * sign(nbr);
+	str[len] = '\0';
 	if (nbr < 10)
 		str[i] = nbr + 48;
-	else
+	while (nbr > 0 && len > 0)
 	{
-	 	ft_itoa(nbr / 10);
-	 	ft_itoa(str[i] = nbr % 10 + 48);		
+		str[--len] = nbr % 10 + 48;
+		nbr = nbr / 10;
 	}
-    return (str);
+	return (str);
 }

@@ -232,17 +232,41 @@ int	main(void)
 	free(strtrim);
 	printf("\n");
 
-//putchar_fd
-	char	c = 'Z';
-	int	fd = 1;
+//split
 
-	ft_putchar_fd(c, fd);
+//itoa
+	char	*test_itoa = ft_itoa(0);
+	printf("ft_itoa: %s\n", test_itoa);
+	free (test_itoa);
+	printf("\n");	
 
-//putstr_fd
-	char	*c = 'ZaZZ';
-	int	fd = 1;
 
-	ft_putchar_fd(c, fd);
+// //strmapi
 
+// //striteri
+
+// //putchar_fd
+// 	char	c = 'Z';
+// 	char	*s = "ZaZZ";
+// 	int	fd = 2;
+	
+// 	printf(" putchar_fd: ");
+// 	ft_putchar_fd(c, fd);
+// 	printf("\n");
+
+// //putstr_fd
+// 	printf(" putstr_fd: ");
+// 	ft_putstr_fd(s, fd);
+// 	printf("\n");
+
+// //putendl_fd
+// 	printf(" putendl_fd: ");
+// 	ft_putendl_fd(s, fd);
+// 	printf("\n");
+
+// //putnbr_fd	
+// 	printf(" putnbr_fd");
+// 	ft_putnbr_fd (number, fd);
+// 	printf("\n");
 	return (0);
 }
