@@ -221,7 +221,7 @@ int	main(void)
 	printf("ft_strjoin: %s\n", s3);
 	free(s3);
 	printf("\n");
-*/
+
 //strtrim
 	char	*string9 = "";
 	char	*set = " ";
@@ -231,9 +231,28 @@ int	main(void)
 	printf("ft_strtrim: %s\n", strtrim);
 	free(strtrim);
 	printf("\n");
-
+*/
 //split
 
+	char *s = "  hola que tal";
+	char c = 32;
+	char **split;
+	int	i;
+	// int words = 3;
+
+	i = 0;
+	printf("ft_split\n");
+	printf("String to be copied: %s\n", s);
+	split = ft_split(s, c);
+	while (split[i])
+	{	
+		printf("String %d: |%s|\n", i, split[i]);
+		i++;
+		printf("\n");
+	}
+	free (split);
+	printf("\n");	
+/*
 //itoa
 	char	*test_itoa = ft_itoa(0);
 	printf("ft_itoa: %s\n", test_itoa);
@@ -254,7 +273,7 @@ int	main(void)
 }
 	printf("before striteri: %s\n", b);
 	ft_striteri("abcd0", ft_toupper(*b));
-	printf("after striteri: %s\n", b);
+	printf("after striteri: %s\n", b);*/
 
 // //putchar_fd
 // 	char	c = 'Z';

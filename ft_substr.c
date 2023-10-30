@@ -15,7 +15,7 @@
 static char	*ft_vide(void)
 {
 	char	*str;
-
+	
 	str = malloc(1);
 	if (str == NULL)
 		return (NULL);
@@ -37,7 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > ft_strlen(s))
 		len = ft_strlen(s);
 	if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
+	 	len = ft_strlen(s) - start;
 	substr = malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
