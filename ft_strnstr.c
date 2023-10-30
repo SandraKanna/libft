@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	while ((j + i ) < len && (little[i]) && (big[j]))
+	while ((j + i) < len && (little[i]) && (big[j]))
 	{
 		if (little[i] == big[j + i])
 			i++;
@@ -33,19 +33,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big + j);
 	else
 		return (NULL);
-}
-
-#include <stdio.h>
-#include <bsd/string.h>
-//gcc -Wall -Wextra -Werror ft_strnstr.c -lbsd
-int	main(void)
-{
-	char *bigstr = "'aaabc\0abcd'";
-	void	*smallstr = "\0";
-	size_t	len = 30;
-	
-	printf("strnstr: %s\n", strnstr(bigstr, smallstr, len));
-	printf("ft_strnstr: %s\n", ft_strnstr(bigstr, smallstr, len));
-
-	return (0);
 }
