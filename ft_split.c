@@ -60,7 +60,7 @@ static char	**fill_args(char **split, char const *s, size_t args, char c)
 		len_args = 0;
 		while (*s == c)
 			s++;
-		while (*s != c)
+		while (*s != '\0' && *s != c)
 		{
 			len_args++;
 			s++;
