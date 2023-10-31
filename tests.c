@@ -234,7 +234,7 @@ int	main(void)
 */
 //split
 
-	char *s = "  hola que tal";
+	char *s = "Tripouille";
 	char c = 32;
 	char **split;
 	int	i;
@@ -250,8 +250,13 @@ int	main(void)
 		i++;
 		printf("\n");
 	}
+	i = 0;
+	while (split[i])
+	{	
+		free(split[i]);
+		i++;
+	}
 	free (split);
-	printf("\n");	
 /*
 //itoa
 	char	*test_itoa = ft_itoa(0);

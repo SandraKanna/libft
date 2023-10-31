@@ -35,42 +35,42 @@ static int  count_args(char const *s, char c)
 		return (0);
 	return (args);
 }
-
-static void	free_split(char **split, size_t args)	
+static char	**free_split(char **split, int h)	
 {
-	while (args >= 0)
-	{
-		free (split[args]);
-		args--;
-	}
-}
-
-static char	**fill_args(char **split, char const *s, char c)
-{	
-	size_t			i;
-	size_t			h;
-	size_t			args;
-	size_t			len_args;
-	unsigned int	start;
+	int	i;
 
 	i = 0;
+	while (i < h)
+	{
+		free (split[i]);
+		i++;
+	}
+	free(split);
+	return (NULL);
+}
+
+static char	**fill_args(char **split, char const *s, size_t args, char c)
+{	
+	size_t			h;
+	size_t			len_args;
+
 	h = 0;
-	start = 0;
-	args = count_args(s, c);
-	while (s[i] && h < args)
+	while (s && h < args)
 	{
 		len_args = 0;
-		if (s[i] == c)
-			i++;
-		while (s[i] != c)
+		while (*s == c)
+			s++;
+		while (*s != c)
 		{
 			len_args++;
-			i++;
+			s++;
 		}
-		split[h] = ft_substr((s + start), 0, (len_args + 1));
+		split[h] = ft_substr((s - len_args), 0, len_args);
 		if (!split[h])
+		{
+			free_split(split, h);
 			return (NULL);
-		start = start + i;
+		}
 		h++;
 	}
 	return (split);
@@ -78,22 +78,39 @@ static char	**fill_args(char **split, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	h;
 	size_t	args;
 	char	**split;
-	// void	*ptr;
-
-	// ptr = 0;
-	h = 0;
-	i = 0;
-	args = count_args(s, c);
+	
 	if (!s)
 		return (NULL);
+	args = count_args(s, c);
 	split = malloc ((args + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
 	split[args] = 0;
-	split = fill_args(split, s, c);
+	split = fill_args(split, s, args, c);
 	return (split);
 }
+
+/*int main(void)
+{
+		char *s = "tripouille";
+	char c = 32;
+	char **split;
+	int	i;
+	// int words = 3;
+
+	i = 0;
+	printf("ft_split\n");
+	printf("String to be copied: %s\n", s);
+	split = ft_split(s, c);
+	while (split[i])
+	{	
+		printf("String %d: |%s|\n", i, split[i]);
+		i++;
+		printf("\n");
+	}
+	free (split);
+	printf("\n");
+	return(0);
+}*/
