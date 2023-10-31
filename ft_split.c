@@ -13,10 +13,10 @@
 #include "libft.h"
 #include <stdio.h>
 
-static int  count_args(char const *s, char c)
+static int	count_args(char const *s, char c)
 {
-	size_t  i;
-	size_t  args;
+	size_t	i;
+	size_t	args;
 
 	i = 0;
 	args = 0;
@@ -35,7 +35,8 @@ static int  count_args(char const *s, char c)
 		return (0);
 	return (args);
 }
-static char	**free_split(char **split, int h)	
+
+static char	**free_split(char **split, int h)
 {
 	int	i;
 
@@ -51,8 +52,8 @@ static char	**free_split(char **split, int h)
 
 static char	**fill_args(char **split, char const *s, size_t args, char c)
 {	
-	size_t			h;
-	size_t			len_args;
+	size_t	h;
+	size_t	len_args;
 
 	h = 0;
 	while (s && h < args)
@@ -80,7 +81,7 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	args;
 	char	**split;
-	
+
 	if (!s)
 		return (NULL);
 	args = count_args(s, c);
