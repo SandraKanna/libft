@@ -6,7 +6,7 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:06:40 by skanna            #+#    #+#             */
-/*   Updated: 2023/10/31 18:00:47 by skanna           ###   ########.fr       */
+/*   Updated: 2023/11/01 21:10:45 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
-	t_list	*next;
 
 	new = malloc(sizeof(t_list));
 	if (!new)

@@ -6,7 +6,7 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:18:52 by skanna            #+#    #+#             */
-/*   Updated: 2023/11/01 16:34:26 by skanna           ###   ########.fr       */
+/*   Updated: 2023/11/01 21:11:40 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	i = 0;
 	if (!lst)
-		return (NULL);
+		return (0);
 	current = lst;
 	while (current != NULL)
 	{
