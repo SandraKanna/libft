@@ -95,21 +95,21 @@ int	main(void)
 	printf ("ft_strlcpy: %ld\n", ft_strlcpy(dest5, src4, size6));
 	printf ("dest2 after: %s\n", dest5);
 	printf("\n");
-
+*/
 //strlcat
 	char	source[] = "\0";
-	char	destination1[50] = "\0";
+	// char	destination1[50] = "\0";
 	char    destination2[50] = "\0";
 	size_t  size7 = 0;
 
-	printf ("dest1 before: %s\n", destination1);
-	printf ("strlcat: %ld\n", strlcat(destination1, source, size7));
-	printf ("dest1 after: %s\n", destination1);
+	// printf ("dest1 before: %s\n", destination1);
+	// printf ("strlcat: %ld\n", strlcat(destination1, source, size7));
+	// printf ("dest1 after: %s\n", destination1);
 	printf ("dest2 before: %s\n", destination2);
 	printf ("ft_strlcat: %ld\n", ft_strlcat(destination2, source, size7));
 	printf ("dest2: %s\n", destination2);
 	printf("\n");
-
+/*
 //toupper
 	printf("toupper: %d\n", toupper('c'));
 	printf("ft_toupper: %d\n", ft_toupper('c'));
@@ -231,7 +231,7 @@ int	main(void)
 	printf("ft_strtrim: %s\n", strtrim);
 	free(strtrim);
 	printf("\n");
-*/
+
 //split
 
 	char *s = "Tripouille";
@@ -257,7 +257,7 @@ int	main(void)
 		i++;
 	}
 	free (split);
-/*
+
 //itoa
 	char	*test_itoa = ft_itoa(0);
 	printf("ft_itoa: %s\n", test_itoa);

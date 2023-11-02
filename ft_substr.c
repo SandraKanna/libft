@@ -30,10 +30,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 
 	i = 0;
-	len_s = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	if (start >= len_s)
+	len_s = ft_strlen(s);
+	if (start >= len_s || !len)
 		return (ft_vide());
 	if (len > len_s)
 		len = len_s;
