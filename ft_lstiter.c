@@ -6,7 +6,7 @@
 /*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:45:50 by skanna            #+#    #+#             */
-/*   Updated: 2023/11/01 20:53:30 by skanna           ###   ########.fr       */
+/*   Updated: 2023/11/02 14:43:01 by skanna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {	
 	if (!lst || !f)
 		return ;
-
 	while (lst)
 	{	
 		f(lst->content);
