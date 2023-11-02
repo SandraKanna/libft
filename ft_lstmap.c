@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skanna <skanna@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 11:54:10 by skanna            #+#    #+#             */
+/*   Updated: 2023/11/02 13:50:56 by skanna           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*newlist;
+	t_list	*newnode;
+	void	*resultf;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	newlist = NULL;
+	while (lst)
+	{
+		resultf = f(lst->content);
+		newnode = ft_lstnew(resultf);
+		if (!newnode)
+		{	
+			free(resultf);
+			ft_lstclear(&newlist, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlist, newnode);
+		lst = lst->next;
+	}
+	return (newlist);
+}
