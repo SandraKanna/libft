@@ -50,7 +50,7 @@ The bonus part is an introduction to linked lists in C. They can be a powerfull 
 - **[ft_lstiter](ft_lstiter.c)**: iterates the list passed as parameter and applies the function ’f’ (also passed as parameter) on the content of each node.
 - **[ft_lstmap](ft_lstmap.c)**: it also iterates the list and applies a function to each node, but it creates a new list with the modified nodes.
 
-For more about linked lists in C, visit [GeeksforGeeks]([url](https://www.geeksforgeeks.org/what-is-linked-list/)) on Linked Lists.
+For more about linked lists in C, visit: https://www.geeksforgeeks.org/what-is-linked-list/
 
 ## The library
 Once we have them all working fine, we have to create our own library that we can then enhanced, update and use for later projects.  
